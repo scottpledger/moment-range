@@ -132,7 +132,7 @@ class DateRange
   * @this {Moment}
   * @return {!DateRange}
 *###
-moment.fn.range = (start, end) ->
+moment.range = (start, end) ->
   if ['year', 'month', 'week', 'day', 'hour', 'minute', 'second'].indexOf(start) > -1
     new DateRange(moment(@).startOf(start), moment(@).endOf(start))
   else
