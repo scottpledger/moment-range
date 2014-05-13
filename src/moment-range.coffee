@@ -146,7 +146,7 @@ class DateRange
         isMatch = true
         matchIf = false
         for matchFmt in key
-          isMatch = isMatch and ((start.format(matchFmt)==end.format(matchFmt))==matchIf)
+          isMatch = isMatch and ((@start.format(matchFmt)==@end.format(matchFmt))==matchIf)
           matchIf = not matchIf
         if isMatch
           return @_format(fmt)
