@@ -160,7 +160,7 @@ class DateRange
   chunk: (duration,boundary) ->
     if duration[0...4] == 'into'
       boundary=moment.normalizeUnits(duration[4..])
-      duration=moment.duration(1,onBoundary)
+      duration=moment.duration(1,boundary)
     begin=moment(@start)
     end=moment(@start)
     result=[]
